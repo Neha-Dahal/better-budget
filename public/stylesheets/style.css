@@ -55,3 +55,12 @@ body {
   color: white;
   background-color: #d73e62;
 }
+h1.cashflow {
+  font-family: "Montserrat";
+}
+.btn-new {
+  width: 100%;
+  height: 50px;
+  color: white;
+  font-weight: 500;
+}
