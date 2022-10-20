@@ -18,5 +18,9 @@ router.post("/save-cashflows", async function (req, res, next) {
   });
   res.redirect("/");
 });
-
+router.get("/history", async function (req, res, next) {
+  const cashflows = await Cashflows.find();
+  console.log(cashflows);
+  res.render("history", { cashflowList: cashflows });
+});
 module.exports = router;
