@@ -17,22 +17,41 @@ body {
 .logo2 {
   font-family: "Montserrat";
 }
-.signup-btn {
+.btn1 {
   background-color: #5f7dde;
   border-color: #5f7dde;
   border-radius: 10px;
 }
-.signup-btn:hover {
+.btn1:hover {
   background-color: #3e62d7;
   border-color: #3e62d7;
 }
-.login-btn {
+.btn2 {
   border-radius: 10px;
   border-color: #5f7dde;
   color: #5f7dde;
 }
-.login-btn:hover {
+.btn2:hover {
   border-color: #3e62d7;
   color: white;
   background-color: #3e62d7;
+}
+.btn3 {
+  background-color: #de5f7d;
+  border-color: #de5f7d;
+  border-radius: 10px;
+}
+.btn3:hover {
+  background-color: #d73e62;
+  border-color: #d73e62;
+}
+.btn4 {
+  border-radius: 10px;
+  border-color: #de5f7d;
+  color: #de5f7d;
+}
+.btn4:hover {
+  border-color: #d73e62;
+  color: white;
+  background-color: #d73e62;
 }
