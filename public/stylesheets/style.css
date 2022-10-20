@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container-xxl {
+  max-width: 1530px;
+}
+.logo1 {
+  font-family: "Pacifico", cursive;
+}
+.logo2 {
+  font-family: "Montserrat";
+}
+.signup-btn {
+  background-color: #5f7dde;
+  border-color: #5f7dde;
+  border-radius: 10px;
+}
+.signup-btn:hover {
+  background-color: #3e62d7;
+  border-color: #3e62d7;
+}
+.login-btn {
+  border-radius: 10px;
+  border-color: #5f7dde;
+  color: #5f7dde;
+}
+.login-btn:hover {
+  border-color: #3e62d7;
+  color: white;
+  background-color: #3e62d7;
+}
