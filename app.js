@@ -5,7 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-
+const mongoose = require("mongoose");
 var app = express();
 
 // view engine setup
@@ -26,6 +26,10 @@ app.use(function (req, res, next) {
   next(createError(404));
 });
 
+mongoose
+  .connect("mongodb://localhost/betterBudgetDB")
+  .then(() => console.log("Connected to DB"))
+  .catch((e) => console.log("error in db connection ", e));
 // error handler
 app.use(function (err, req, res, next) {
   // set locals, only providing error in development
