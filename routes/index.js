@@ -23,4 +23,9 @@ router.get("/history", async function (req, res, next) {
   console.log(cashflows);
   res.render("history", { cashflowList: cashflows });
 });
+router.get("/reports", async function (req, res, next) {
+  const cashflows = await Cashflows.find();
+  //console.log(cashflows);
+  res.render("reports", { cashflowList: cashflows });
+});
 module.exports = router;

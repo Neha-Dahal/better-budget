@@ -55,7 +55,10 @@
       </header>
 
       <main>
-        <% cashflowList.forEach((cashflow,index)=>{%><div><div><h5><%= cashflow.category %></h5><p><%= cashflow.date.toLocaleDateString() %></p><p><%= cashflow.amount %></p></div> 
+        <% cashflowList.sort((a,b)=>{%>
+            <% return b.date - a.date %>
+        <%})%>
+        <% cashflowList.forEach((cashflow,index)=>{%><div><div><h5><%= cashflow.category %></h5><p><%= cashflow.date.toLocaleDateString() %></p><p>Rs. <%= cashflow.amount %></p></div> 
     <%})%>
       </main>
 
