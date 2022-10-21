@@ -55,12 +55,35 @@
       </header>
 
       <main>
-        <h1>Weekly Total</h1>
-        <%cashflowList.forEach((cashflow,index)=>{%>Rs. <%=
-        cashflow.weekly_total %> <%})%>
-        <h1>Monthly Total</h1>
-        <%cashflowList2.forEach((cashflow,index)=>{%>Rs. <%=
-        cashflow.monthly_total %> <%})%>
+        <div class="px-5 pt-5">
+          <h1 class="cashflow text-center display-5 fw-bold mb-4">Reports</h1>
+          <div class="cards">
+            <div class="card">
+              <div class="card-header">Weekly Total</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%cashflowList.forEach((cashflow,index)=>{%>Rs. <%=
+                  cashflow.weekly_total %> <%})%>
+                </h5>
+                <p class="card-text">Weekly Insights:</p>
+                
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header">Monthly Total</div>
+              <div class="card-body">
+                <h5 class="card-title">
+                  <%cashflowList2.forEach((cashflow,index)=>{%>Rs. <%=
+                  cashflow.monthly_total %> <%})%>
+                </h5>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
 
       <footer class="text-center text-lg-start bg-white text-muted">

@@ -83,3 +83,27 @@ th {
 .category-table {
   font-weight: 500;
 }
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.card {
+  margin-left: 20px;
+  border-color: #5f7dde;
+  width: 100%;
+}
+.card-header {
+  font-size: larger;
+  text-align: center;
+  background-color: #5f7dde;
+  color: white;
+}
+.card-title {
+  font-size: x-large;
+  text-align: center;
+}
+.card-text {
+  text-align: center;
+}
