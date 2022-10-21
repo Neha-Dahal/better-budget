@@ -24,7 +24,10 @@ router.get("/history", async function (req, res, next) {
   res.render("history", { cashflowList: cashflows });
 });
 router.get("/reports", async function (req, res, next) {
-  const cashflows = await Cashflows.find();
+  const cashflows = await Cashflows.aggregate([
+    { $group: { _id: { $week: "$date" }, weekly_total: { $sum: "$amount" } } },
+    { $match: { _id: 42 } },
+  ]);
   //console.log(cashflows);
   res.render("reports", { cashflowList: cashflows });
 });
