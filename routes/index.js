@@ -16,7 +16,7 @@ router.post("/save-cashflows", async function (req, res, next) {
     category: req.body.category,
     amount: req.body.amount,
   });
-  res.redirect("/");
+  res.redirect("/history");
 });
 router.get("/history", async function (req, res, next) {
   const cashflows = await Cashflows.find();
@@ -24,11 +24,30 @@ router.get("/history", async function (req, res, next) {
   res.render("history", { cashflowList: cashflows });
 });
 router.get("/reports", async function (req, res, next) {
+  currentDate = new Date();
+  startDate = new Date(currentDate.getFullYear(), 0, 1);
+  var days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
+
+  var weekNumber = Math.ceil(days / 7);
+  var monthNumber = new Date().getMonth() + 1;
+  console.log("Month number=", monthNumber);
   const cashflows = await Cashflows.aggregate([
-    { $group: { _id: { $week: "$date" }, weekly_total: { $sum: "$amount" } } },
-    { $match: { _id: 42 } },
+    {
+      $group: { _id: { $week: "$date" }, weekly_total: { $sum: "$amount" } },
+    },
+    { $match: { _id: weekNumber } },
   ]);
   //console.log(cashflows);
-  res.render("reports", { cashflowList: cashflows });
+
+  const cashflows2 = await Cashflows.aggregate([
+    {
+      $group: {
+        _id: { $month: "$date" },
+        monthly_total: { $sum: "$amount" },
+      },
+    },
+    { $match: { _id: monthNumber } },
+  ]);
+  res.render("reports", { cashflowList: cashflows, cashflowList2: cashflows2 });
 });
 module.exports = router;

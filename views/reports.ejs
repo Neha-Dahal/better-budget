@@ -55,8 +55,12 @@
       </header>
 
       <main>
-        <%cashflowList.forEach((cashflow,index)=>{%><%= cashflow.weekly_total %>
-        <%})%>
+        <h1>Weekly Total</h1>
+        <%cashflowList.forEach((cashflow,index)=>{%>Rs. <%=
+        cashflow.weekly_total %> <%})%>
+        <h1>Monthly Total</h1>
+        <%cashflowList2.forEach((cashflow,index)=>{%>Rs. <%=
+        cashflow.monthly_total %> <%})%>
       </main>
 
       <footer class="text-center text-lg-start bg-white text-muted">
