@@ -64,3 +64,22 @@ h1.cashflow {
   color: white;
   font-weight: 500;
 }
+
+table {
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 20px;
+  text-align: left;
+}
+th {
+  background-color: #5f7dde;
+  color: white;
+}
+.table-container {
+  overflow-x: auto;
+}
+.category-table {
+  font-weight: 500;
+}
