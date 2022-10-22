@@ -49,37 +49,38 @@
           </li>
         </ul>
         <div class="col-md-3 text-end">
-          <a href="#" class="px-2 link-secondary">Login</a>
-          <a href="#" class="px-2 link-secondary">Sign Up</a>
+          <a href="#" class="px-2 link-secondary"
+            ><img src="/images/avatar.jpg" alt="Avatar" class="avatar"
+          /></a>
+          <a href="#" class="px-2 link-secondary Username">Neha Dahal</a>
         </div>
       </header>
 
       <main>
-        <div class="px-5 pt-5">
+        <div class="main px-5 pt-5">
           <h1 class="cashflow text-center display-5 fw-bold mb-4">Reports</h1>
           <div class="cards">
             <div class="card">
               <div class="card-header">Weekly Total</div>
               <div class="card-body">
-                <h5 class="card-title">
+                <h5 class="card-title title1">
                   <%cashflowList.forEach((cashflow,index)=>{%>Rs. <%=
                   cashflow.weekly_total %> <%})%>
                 </h5>
-                <p class="card-text">Weekly Insights:</p>
-                
               </div>
             </div>
             <div class="card">
               <div class="card-header">Monthly Total</div>
               <div class="card-body">
-                <h5 class="card-title">
+                <h5 class="card-title title1">
                   <%cashflowList2.forEach((cashflow,index)=>{%>Rs. <%=
                   cashflow.monthly_total %> <%})%>
                 </h5>
-                <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title insights">View More Insights</h5>
               </div>
             </div>
           </div>

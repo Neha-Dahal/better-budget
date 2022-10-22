@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 body {
   padding: 0;
   margin: 0;
@@ -55,6 +58,10 @@ body {
   color: white;
   background-color: #d73e62;
 }
+.Username {
+  text-decoration: none;
+  font-weight: bold;
+}
 h1.cashflow {
   font-family: "Montserrat";
 }
@@ -83,6 +90,13 @@ th {
 .category-table {
   font-weight: 500;
 }
+.main {
+  margin-bottom: 60px;
+}
+.avatar {
+  width: 50px;
+  height: 50px;
+}
 .cards {
   display: flex;
   justify-content: center;
@@ -90,20 +104,40 @@ th {
   padding: 20px;
 }
 .card {
-  margin-left: 20px;
+  margin-left: 60px;
   border-color: #5f7dde;
-  width: 100%;
+  width: 250px;
+  height: 250px;
+  background-color: #5f7dde;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+.card:hover {
+  background-color: #3e62d7;
+  cursor: pointer;
 }
 .card-header {
   font-size: larger;
   text-align: center;
-  background-color: #5f7dde;
+  /* background-color: #5f7dde; */
+  color: white;
+  border: none;
+}
+.title1 {
+  font-size: xx-large;
+  text-align: center;
   color: white;
 }
 .card-title {
-  font-size: x-large;
   text-align: center;
+  color: white;
+  padding: 20px;
+  margin-top: 30px;
 }
 .card-text {
   text-align: center;
+  color: white;
+}
+.insights {
+  margin-top: 60px;
 }
