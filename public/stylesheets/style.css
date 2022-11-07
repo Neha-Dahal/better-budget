@@ -24,6 +24,7 @@ body {
   background-color: #5f7dde;
   border-color: #5f7dde;
   border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
 }
 .btn1:hover {
   background-color: #3e62d7;
@@ -33,6 +34,7 @@ body {
   border-radius: 10px;
   border-color: #5f7dde;
   color: #5f7dde;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
 }
 .btn2:hover {
   border-color: #3e62d7;
@@ -43,6 +45,7 @@ body {
   background-color: #de5f7d;
   border-color: #de5f7d;
   border-radius: 10px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
 }
 .btn3:hover {
   background-color: #d73e62;
@@ -52,6 +55,7 @@ body {
   border-radius: 10px;
   border-color: #de5f7d;
   color: #de5f7d;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
 }
 .btn4:hover {
   border-color: #d73e62;
@@ -70,6 +74,7 @@ h1.cashflow {
   height: 50px;
   color: white;
   font-weight: 500;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
 }
 
 table {
